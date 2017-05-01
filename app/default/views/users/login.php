@@ -10,19 +10,7 @@ View::header('users');
                 <div class="box">
                     <div class="content-wrap">
                         <h6>Sign In</h6>
-                        <div class="social">
-                            <a class="face_login" href="#">
-                                <span class="face_icon">
-                                    <?php View::image('facebook.png','','big'); ?>
-                                </span>
-                                <span class="text">Sign in with Facebook</span>
-                            </a>
-                            <div class="division">
-                                <hr class="left">
-                                <span>or</span>
-                                <hr class="right">
-                            </div>
-                        </div>
+                        <?php echo View::getMessage(); ?>
                         <form method="post">
                             <input type="hidden" name="action" value="login" />
                             <input class="form-control" type="text" placeholder="<?php echo Lang::get('LOGIN_USERLABEL'); ?>" name="usr">

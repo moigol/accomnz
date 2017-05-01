@@ -2,6 +2,9 @@ ENVIRONMENT=development
 DEBUG=true
 TEMPLATE=default
 
+HASHPHRASE=4e52820c817c12ece280ffe0f0b395bb
+SESSIONCODE=m015e520c654c12ece321ffe0f0b395cc
+
 SITE_TITLE=MyPHPFrame 2.0
 SITE_URI=http://cutearts.org
 SITE_TAGLINE=Rapid Development Framework

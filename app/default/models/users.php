@@ -10,7 +10,7 @@ class Users_model extends Model
     function doLogin()
     {
         if(isset($this->post['action']) && $this->post['action'] == 'login') {
-            $userdata = User::infoByEmail(false,$this->post['usr']);            
+            $userdata = User::infoByEmail(false,$this->post['usr']); 
             if($userdata) {
                 if($this->decrypt($userdata->Password) == $this->post['pwd']) {
                     //unset($_SESSION[SESSIONCODE]);

@@ -36,13 +36,14 @@ define('APPROOT',  INSTALLDIR . DS . APPDIR . DS);
 define('SYSPATH',  ROOTDIR . DS . SYSDIR . DS);
 define('CONFPATH', ROOTDIR . DS . CONFDIR . DS);
 define('SQLPATH', ROOTDIR . DS . 'sql' . DS);
-define('HASHPHRASE','4e52820c817c12ece280ffe0f0b395bbasdf');
-define('SESSIONCODE','m015e520c654c12ece321ffe0f0b395ccasdf');
 
 /**
  *  Include configuration class
  */
 require_once CONFPATH.'configuration.php';
+
+define('HASHPHRASE',Config::get('HASHPHRASE'));
+define('SESSIONCODE',Config::get('SESSIONCODE'));
 
 /**
  *  Include database class
