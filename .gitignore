@@ -1,0 +1,6 @@
+*.log
+default-error.log
+nbproject
+/.htaccess
+/README.txt
+mpf

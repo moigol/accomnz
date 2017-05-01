@@ -4,7 +4,8 @@ body {
   position: relative;
   margin: 0px;
   font-size: 12px;
-  padding: 0px;
+  padding: 0px 0 80px;
+  height: 100%;
 }
 
 .page-content > .row {
@@ -23,6 +24,8 @@ footer{
    line-height:25px;
    padding:10px 0px 10px 0px;
    bottom: 0px;
+   position: absolute;
+   width: 100%;
 }
 
 footer a{
