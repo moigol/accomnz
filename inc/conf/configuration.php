@@ -28,7 +28,7 @@ class Config
     
     // Set a global styles and scripts
     static $scripts = array();
-    static $styles = array('assets/bootstrap/css/bootstrap.min.css','assets/css/style.css');    
+    static $styles = array('assets/bootstrap/css/bootstrap.min.css','assets/css/styles.css');    
     static $footerscripts = array("assets/bootstrap/js/bootstrap.min.js",'assets/js/custom.js');
     static $footerstyles = array();
     

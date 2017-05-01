@@ -21,9 +21,9 @@ STAGE_PASS=password
 
 DEVELOPMENT=http://localhost/accomnz
 DEV_HOST=localhost
-DEV_NAME=booknstay
-DEV_USER=root
-DEV_PASS=moises555
+DEV_NAME=accomnz
+DEV_USER=accomnz
+DEV_PASS=dev123890
 
 MAIL_DRIVER=smtp
 MAIL_HOST=smtp.mail.com
