@@ -6,13 +6,15 @@ class Main_model extends Model
         parent::__construct();
         
         View::$footerscripts = array(
-            'vendor/jquery/dist/jquery.min.js',
-            'vendor/bootstrap/dist/js/bootstrap.min.js',
-            'vendor/fastclick/lib/fastclick.js',
-            'vendor/nprogress/nprogress.js'
+            'assets/jquery/jquery.js',
+            'assets/jquery/jquery-ui.js',
+            'assets/bootstrap/js/bootstrap.min.js'
             );   
 
-        View::$styles = array('vendor/bootstrap/dist/css/bootstrap.min.css','vendor/font-awesome/css/font-awesome.min.css','assets/css/custom.css');
+        View::$styles = array(
+            'assets/jquery/jquery-ui.css',
+            'assets/bootstrap/css/bootstrap.min.css'
+            );
     }
 
     function getCounts($ID = false)
@@ -284,60 +286,32 @@ class Main_model extends Model
 
     public function commonAssets()
     {
-        View::$footerscripts[] = "vendor/datatables.net/js/jquery.dataTables.min.js";
-        View::$footerscripts[] = "vendor/datatables.net-bs/js/dataTables.bootstrap.min.js";
-        View::$footerscripts[] = "vendor/datatables.net-buttons/js/dataTables.buttons.min.js";
-        View::$footerscripts[] = "vendor/datatables.net-buttons-bs/js/buttons.bootstrap.min.js";
-        View::$footerscripts[] = "vendor/datatables.net-buttons/js/buttons.flash.min.js";
-        View::$footerscripts[] = "vendor/datatables.net-buttons/js/buttons.html5.min.js";
-        View::$footerscripts[] = "vendor/datatables.net-buttons/js/buttons.print.min.js";
-        View::$footerscripts[] = "vendor/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js";
-        View::$footerscripts[] = "vendor/datatables.net-keytable/js/dataTables.keyTable.min.js";
-        View::$footerscripts[] = "vendor/datatables.net-responsive/js/dataTables.responsive.min.js";
-        View::$footerscripts[] = "vendor/datatables.net-responsive-bs/js/responsive.bootstrap.js";
-        View::$footerscripts[] = "vendor/datatables.net-scroller/js/datatables.scroller.min.js";
-        View::$footerscripts[] = "vendor/jszip/dist/jszip.min.js";
-        View::$footerscripts[] = "vendor/pdfmake/build/pdfmake.min.js";
-        View::$footerscripts[] = "vendor/pdfmake/build/vfs_fonts.js";
-
-        View::$footerscripts[] = 'assets/js/moment/moment.min.js';
-        View::$footerscripts[] = 'assets/js/datepicker/daterangepicker.js';
-
+        View::$footerscripts[] = "vendors/datatables/js/jquery.dataTables.min.js";
+        View::$footerscripts[] = "vendors/datatables/dataTables.bootstrap.js";
+        View::$footerscripts[] = 'assets/js/tables.js';
         View::$footerscripts[] = 'assets/js/custom.js';
-        View::$footerscripts[] = 'assets/js/casefiles.js';
 
-
+        View::$styles[] = 'assets/css/calendar.css';
+        View::$styles[] = 'assets/css/buttons.css';
+        View::$styles[] = 'assets/css/forms.css';
+        View::$styles[] = 'assets/css/stats.css';
+        View::$styles[] = 'assets/css/styles.css';
+        View::$styles[] = "vendors/datatables/dataTables.bootstrap.css";
     }
 
     public function indexAssets()
     {
-        View::$footerscripts[] = "vendor/datatables.net/js/jquery.dataTables.min.js";
-        View::$footerscripts[] = "vendor/datatables.net-bs/js/dataTables.bootstrap.min.js";
-        View::$footerscripts[] = "vendor/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js";
-        View::$footerscripts[] = "vendor/datatables.net-keytable/js/dataTables.keyTable.min.js";
-        View::$footerscripts[] = "vendor/datatables.net-responsive/js/dataTables.responsive.min.js";
-        View::$footerscripts[] = "vendor/datatables.net-responsive-bs/js/responsive.bootstrap.js";
-        View::$footerscripts[] = "vendor/datatables.net-scroller/js/datatables.scroller.min.js";
-        
-        View::$footerscripts[] = 'assets/js/moment/moment.min.js';
-        View::$footerscripts[] = 'assets/js/datepicker/daterangepicker.js';
-
-        View::$footerscripts[] = 'assets/js/fileinput.js';
-
+        View::$footerscripts[] = "vendors/datatables/js/jquery.dataTables.min.js";
+        View::$footerscripts[] = "vendors/datatables/dataTables.bootstrap.js";
+        View::$footerscripts[] = 'assets/js/tables.js';
         View::$footerscripts[] = 'assets/js/custom.js';
-        View::$footerscripts[] = 'assets/js/table.js';
-        View::$footerscripts[] = 'assets/js/form.js';
-        View::$footerscripts[] = 'assets/js/dashboard.js';
 
-        View::$styles[] = 'assets/css/fileinput.css';
-        view::$styles[] = 'assets/css/form.css';
-        View::$styles[] = "vendor/iCheck/skins/flat/green.css";
-
-        View::$styles[] = "vendor/datatables.net-bs/css/dataTables.bootstrap.min.css";
-        View::$styles[] = "vendor/datatables.net-buttons-bs/css/buttons.bootstrap.min.css";
-        View::$styles[] = "vendor/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css";
-        View::$styles[] = "vendor/datatables.net-responsive-bs/css/responsive.bootstrap.min.css";
-        View::$styles[] = "vendor/datatables.net-scroller-bs/css/scroller.bootstrap.min.css";
+        View::$styles[] = 'assets/css/calendar.css';
+        View::$styles[] = 'assets/css/buttons.css';
+        View::$styles[] = 'assets/css/forms.css';
+        View::$styles[] = 'assets/css/stats.css';
+        View::$styles[] = 'assets/css/styles.css';
+        View::$styles[] = "vendors/datatables/dataTables.bootstrap.css";
 
     }
 }

@@ -25,18 +25,11 @@ class Ajax extends Controller
         echo $users->getUserByCode($this->post['ID']);
     }
 
-    // public function userInfo()
-    // {
-    //     $users = $this->load->model('users',true, true);
-    //     $search = $this->load->model('search',true, true);
-    //     $data = $users->getUserByCode($this->post['ID']);
-    //     $data2 = json_decode($data);
-
-    //     $comp = $search->getUserParents($this->post['UserID']);
-    //     $data2->CompanyName = $comp[0]->CompanyName;
-
-    //     echo json_encode($data2);
-    // }
+    public function regionInfo()
+    {
+        $regions = $this->load()->model('regions',true,true);
+        echo $regions->getRegionByID($this->post['id']);
+    }
     
     public function checkemail()
     {
