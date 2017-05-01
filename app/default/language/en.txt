@@ -1,0 +1,19 @@
+LOGIN_TITLE=Welcome to
+LOGIN_SUBTITLE=Please Sign in
+LOGIN_BUTTON=Login
+LOGIN_RESET=Lost your password?
+LOGIN_USERLABEL=Enter Username or Email
+LOGIN_PASSLABEL=Password
+
+RESET_TITLE=Welcome to
+RESET_SUBTITLE=Request Password Recall
+RESET_BUTTON=Submit
+RESET_LOGIN=Login
+RESETL_USERLABE=Username
+RESET_EMAILLABEL=Email
+
+HEADER_PROFILE=Profile
+HEADER_LOGOUT=Logout
+
+
+

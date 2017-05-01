@@ -1,0 +1,42 @@
+ENVIRONMENT=development
+DEBUG=true
+TEMPLATE=default
+
+SITE_TITLE=MyPHPFrame 2.0
+SITE_URI=http://cutearts.org
+SITE_TAGLINE=Rapid Development Framework
+SITE_COPYRIGHT=Copyright © 2015 MyPHPFrame. All rights reserved
+
+PRODUCTION=http://myphpframe.com
+DB_HOST=localhost
+DB_NAME=dbname
+DB_USER=dbuser
+DB_PASS=password
+
+STAGING=http://staging.myphpframe.com
+STAGE_HOST=localhost
+STAGE_NAME=dbuser
+STAGE_USER=dbuser
+STAGE_PASS=password
+
+DEVELOPMENT=http://localhost/accomnz
+DEV_HOST=localhost
+DEV_NAME=booknstay
+DEV_USER=root
+DEV_PASS=moises555
+
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.mail.com
+MAIL_PORT=25
+MAIL_USERNAME=mail@mail.com
+MAIL_PASSWORD=password
+MAIL_ENCRYPTION=ssl
+
+FILE_EXT=php
+CONTROLLER=main
+NOPAGE=errorpage
+
+PDFCROWDID=
+PDFCROWDKEY=
+
+ALLOWED_CONTROLLERS=main|users|admin|casefiles

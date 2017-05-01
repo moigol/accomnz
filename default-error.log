@@ -1,0 +1,125 @@
+[27-Apr-2017 17:45:44 America/Los_Angeles] PHP Fatal error:  Class 'reports_model' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\loader.php on line 85
+[27-Apr-2017 17:46:33 America/Los_Angeles] PHP Notice:  Undefined index: LOGIN_TITLE in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[27-Apr-2017 17:46:33 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\users\login.php on line 33
+[27-Apr-2017 17:51:28 America/Los_Angeles] PHP Notice:  Undefined index: LOGIN_TITLE in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[27-Apr-2017 17:51:28 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\users\login.php on line 33
+[27-Apr-2017 17:52:17 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\users\login.php on line 33
+[27-Apr-2017 17:52:39 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\users\login.php on line 33
+[27-Apr-2017 17:53:03 America/Los_Angeles] PHP Fatal error:  Class 'Utility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\users\login.php on line 33
+[28-Apr-2017 07:12:50 America/Los_Angeles] PHP Fatal error:  Call to undefined method User::ByEmail() in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\models\users.php on line 21
+[28-Apr-2017 07:13:08 America/Los_Angeles] PHP Fatal error:  Class 'reports_model' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\loader.php on line 85
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined index: MENU_GENERAL_TITLE in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined index: MENU_DASHBOARD in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined index: MENU_CF in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined index: MENU_CF_MANAGE in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined index: MENU_CF_ADD in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined index: MENU_CF_TRASH in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined index: MENU_CLIENT in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined index: MENU_CLIENT_SEARCH in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined index: MENU_CLIENT_MY in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined index: MENU_AGT in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined index: MENU_AGT_MANAGE in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined index: MENU_AGT_ADD in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined index: MENU_AGY in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined index: MENU_AGY_MANAGE in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined index: MENU_AGY_ADD in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined index: MENU_MNG in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:41 America/Los_Angeles] PHP Notice:  Undefined index: MENU_MNG_MANAGE in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:42 America/Los_Angeles] PHP Notice:  Undefined index: MENU_MNG_ADD in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:42 America/Los_Angeles] PHP Notice:  Undefined index: MENU_RPT in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:42 America/Los_Angeles] PHP Notice:  Undefined index: MENU_RPT_SALES in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:42 America/Los_Angeles] PHP Notice:  Undefined index: MENU_RPT_GSALES in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:42 America/Los_Angeles] PHP Notice:  Undefined index: MENU_RPT_NETWORK in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:42 America/Los_Angeles] PHP Notice:  Undefined index: SIDEBAR_DOWNLOADS in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:42 America/Los_Angeles] PHP Notice:  Undefined index: MENU_ADMIN_TITLE in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:42 America/Los_Angeles] PHP Notice:  Undefined index: MENU_USER in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:42 America/Los_Angeles] PHP Notice:  Undefined index: MENU_USER_MANAGE in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:42 America/Los_Angeles] PHP Notice:  Undefined index: MENU_USER_ADD in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:42 America/Los_Angeles] PHP Notice:  Undefined index: MENU_USER_TRASH in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:42 America/Los_Angeles] PHP Notice:  Undefined index: MENU_STNGS in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:42 America/Los_Angeles] PHP Notice:  Undefined index: MENU_ACTYLOGS in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:21:42 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 17
+[28-Apr-2017 07:21:42 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 37
+[28-Apr-2017 07:24:17 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 07:24:17 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 07:24:17 America/Los_Angeles] PHP Notice:  Undefined index: MENU_ADMIN_TITLE in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:24:17 America/Los_Angeles] PHP Notice:  Undefined index: MENU_USER in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:24:17 America/Los_Angeles] PHP Notice:  Undefined index: MENU_USER_MANAGE in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:24:17 America/Los_Angeles] PHP Notice:  Undefined index: MENU_USER_ADD in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:24:17 America/Los_Angeles] PHP Notice:  Undefined index: MENU_USER_TRASH in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:24:17 America/Los_Angeles] PHP Notice:  Undefined index: MENU_STNGS in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:24:17 America/Los_Angeles] PHP Notice:  Undefined index: MENU_ACTYLOGS in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:24:17 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 17
+[28-Apr-2017 07:24:17 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 37
+[28-Apr-2017 07:25:01 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 07:25:01 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 07:25:01 America/Los_Angeles] PHP Notice:  Undefined index: MENU_ADMIN_TITLE in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:25:01 America/Los_Angeles] PHP Notice:  Undefined index: MENU_USER in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:25:01 America/Los_Angeles] PHP Notice:  Undefined index: MENU_USER_MANAGE in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:25:01 America/Los_Angeles] PHP Notice:  Undefined index: MENU_USER_ADD in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:25:01 America/Los_Angeles] PHP Notice:  Undefined index: MENU_USER_TRASH in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:25:01 America/Los_Angeles] PHP Notice:  Undefined index: MENU_STNGS in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:25:01 America/Los_Angeles] PHP Notice:  Undefined index: MENU_ACTYLOGS in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:25:01 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 17
+[28-Apr-2017 07:25:01 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 37
+[28-Apr-2017 07:25:26 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 07:25:26 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 07:25:26 America/Los_Angeles] PHP Notice:  Undefined index: MENU_USER in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:25:26 America/Los_Angeles] PHP Notice:  Undefined index: MENU_USER_MANAGE in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:25:26 America/Los_Angeles] PHP Notice:  Undefined index: MENU_USER_ADD in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:25:26 America/Los_Angeles] PHP Notice:  Undefined index: MENU_USER_TRASH in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:25:26 America/Los_Angeles] PHP Notice:  Undefined index: MENU_STNGS in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:25:26 America/Los_Angeles] PHP Notice:  Undefined index: MENU_ACTYLOGS in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\language.php on line 52
+[28-Apr-2017 07:25:26 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 17
+[28-Apr-2017 07:25:26 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 37
+[28-Apr-2017 07:30:24 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 07:30:24 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 07:30:24 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 17
+[28-Apr-2017 07:30:24 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 37
+[28-Apr-2017 10:52:48 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 10:52:48 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 10:52:48 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 17
+[28-Apr-2017 10:52:48 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 37
+[28-Apr-2017 10:52:58 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 10:52:58 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 10:52:58 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 17
+[28-Apr-2017 10:52:58 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 37
+[28-Apr-2017 10:56:00 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 10:56:00 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 10:56:00 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 17
+[28-Apr-2017 10:56:00 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 37
+[28-Apr-2017 10:57:58 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 10:57:58 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 10:57:58 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 17
+[28-Apr-2017 10:57:58 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 37
+[28-Apr-2017 10:58:35 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 10:58:35 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 10:58:35 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 17
+[28-Apr-2017 10:58:35 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 37
+[28-Apr-2017 10:58:43 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 10:58:43 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 10:58:43 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 17
+[28-Apr-2017 10:58:43 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 37
+[28-Apr-2017 10:58:53 America/Los_Angeles] PHP Fatal error:  Call to undefined method User::index() in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\common.php on line 168
+[28-Apr-2017 11:11:22 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 11:11:22 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 11:11:22 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 17
+[28-Apr-2017 11:11:22 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 37
+[28-Apr-2017 11:11:28 America/Los_Angeles] PHP Fatal error:  Call to undefined method User::index() in C:\Bitnami\wamp\apache2\htdocs\booknstay\inc\sys\core\common.php on line 168
+[28-Apr-2017 11:11:37 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 11:11:37 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 11:11:37 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 17
+[28-Apr-2017 11:11:37 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 37
+[28-Apr-2017 11:12:31 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 11:12:31 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\header.php on line 11
+[28-Apr-2017 11:12:31 America/Los_Angeles] PHP Notice:  Undefined property: stdClass::$Avatar in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\sidebar.php on line 8
+[28-Apr-2017 11:12:31 America/Los_Angeles] PHP Notice:  Undefined property: stdClass::$FirstName in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\sidebar.php on line 12
+[28-Apr-2017 11:12:31 America/Los_Angeles] PHP Notice:  Undefined property: stdClass::$LastName in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\sidebar.php on line 12
+[28-Apr-2017 11:12:31 America/Los_Angeles] PHP Notice:  Undefined property: stdClass::$UserLevel in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\sidebar.php on line 13
+[28-Apr-2017 11:12:31 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 17
+[28-Apr-2017 11:12:31 America/Los_Angeles] PHP Notice:  Undefined property: stdClass::$Avatar in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 24
+[28-Apr-2017 11:12:31 America/Los_Angeles] PHP Notice:  Undefined property: stdClass::$FirstName in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 26
+[28-Apr-2017 11:12:31 America/Los_Angeles] PHP Notice:  Undefined property: stdClass::$LastName in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 26
+[28-Apr-2017 11:12:31 America/Los_Angeles] PHP Fatal error:  Class 'GAUtility' not found in C:\Bitnami\wamp\apache2\htdocs\booknstay\app\default\views\top.php on line 37
