@@ -1,4 +1,4 @@
-ENVIRONMENT=development
+ENVIRONMENT=production
 DEBUG=true
 TEMPLATE=default
 
@@ -10,11 +10,11 @@ SITE_URI=http://cutearts.org
 SITE_TAGLINE=Rapid Development Framework
 SITE_COPYRIGHT=Copyright © 2015 MyPHPFrame. All rights reserved
 
-PRODUCTION=http://myphpframe.com
+PRODUCTION=http://localhost/accomnz
 DB_HOST=localhost
-DB_NAME=dbname
-DB_USER=dbuser
-DB_PASS=password
+DB_NAME=accomnz
+DB_USER=accomnz
+DB_PASS=dev123890
 
 STAGING=http://staging.myphpframe.com
 STAGE_HOST=localhost

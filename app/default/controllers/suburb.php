@@ -12,7 +12,7 @@ class Suburb extends Controller
         }
         
         // Load vendor class
-        $this->load->vendor('gautility');
+        $this->load->vendor('utility');
     }
 
     public function index()
