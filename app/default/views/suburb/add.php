@@ -17,7 +17,7 @@ View::header();
                 <label class="col-sm-2 control-label">Region / Code</label>
                 <div class="col-sm-10">
                     <div class="row">
-                        <div class="col-sm-10">
+                        <div class="col-sm-12">
                             <select id="regionSel" name="region_id" class="form-control" rel="<?php echo View::URL('ajax/regionInfo/'); ?>">
                                 <option value="">Select Region</option>
                                 <?php
@@ -29,8 +29,8 @@ View::header();
                                 ?>
                             </select>
                         </div>
-                        <div class="col-sm-2">
-                            <input type="text" id="regionCode" name="region_code" class="form-control" value="">
+                        <div class="col-sm-6">
+                            <!-- <input type="text" id="regionCode" name="region_code" class="form-control" value=""> -->
                         </div>
                     </div>
                 </div>
