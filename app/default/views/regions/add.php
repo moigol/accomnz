@@ -1,5 +1,5 @@
 <?php 
-View::$title = 'Add Suburb';
+View::$title = 'Edit Region';
 View::$bodyclass = User::info('Sidebar');
 View::header(); 
 ?>
@@ -12,33 +12,17 @@ View::header();
     <div class="panel-body">
     <?php echo View::getMessage();  ?> 
         <form class="form-horizontal" role="form" method="post">
-        <input type="hidden" name="action" value="addsuburb">
+        <input type="hidden" name="action" value="addregion">
             <div class="form-group">
-                <label class="col-sm-2 control-label">Region / Code</label>
+                <label class="col-sm-2 control-label">Region</label>
                 <div class="col-sm-10">
-                    <div class="row">
-                        <div class="col-sm-10">
-                            <select id="regionSel" name="region_id" class="form-control" rel="<?php echo View::URL('ajax/regionInfo/'); ?>">
-                                <option value="">Select Region</option>
-                                <?php
-                                if($regs){
-                                    foreach($regs as $reg){ ?>
-                                        <option value="<?php echo $reg->id; ?>"><?php echo $reg->region; ?></option>
-                                    <?php }
-                                }
-                                ?>
-                            </select>
-                        </div>
-                        <div class="col-sm-2">
-                            <input type="text" id="regionCode" name="region_code" class="form-control" value="">
-                        </div>
-                    </div>
+                    <input type="text" name="region" class="form-control" value="">
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Suburb</label>
+                <label class="col-sm-2 control-label">Island</label>
                 <div class="col-sm-10">
-                    <input type="text" name="suburb" class="form-control" placeholder="Suburb" value="">
+                    <input type="text" name="island" class="form-control" placeholder="island" value="">
                 </div>
             </div>
             <div class="form-group">
@@ -64,28 +48,28 @@ View::header();
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Page Description</label>
+                <label class="col-sm-2 control-label">Meta Description</label>
                 <div class="col-sm-10">
-                    <input type="text" name="page_desc" class="form-control" placeholder="Page Description" value="">
+                    <input type="text" name="meta_desc" class="form-control" placeholder="Meta Description" value="">
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Page Key</label>
+                <label class="col-sm-2 control-label">Meta Key</label>
                 <div class="col-sm-10">
-                    <input type="text" name="page_key" class="form-control" placeholder="Page Key" value="">
+                    <input type="text" name="meta_key" class="form-control" placeholder="Meta Key" value="">
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Suburb Code</label>
+                <label class="col-sm-2 control-label">Book it Code</label>
                 <div class="col-sm-10">
-                    <input type="text" name="suburb_code" class="form-control" placeholder="Suburb Code" value="">
+                    <input type="text" name="bookit_code" class="form-control" placeholder="Book it Code" value="">
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <a href="<?php echo View::Url('suburb'); ?>" class="btn btn-warning">Back</a>
-                    <button type="submit" class="btn btn-success">Add</button>
+                    <a href="<?php echo View::Url('regions'); ?>" class="btn btn-warning">Back</a>
+                    <button type="submit" class="btn btn-success">Add Region</button>
                 </div>
             </div>
         </form>

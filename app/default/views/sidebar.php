@@ -1,6 +1,6 @@
 <?php $userinfo = User::info(); ?>
 <div class="sidebar content-box" style="display: block;">
-    <ul class="nav">
+    <ul class="nav sidebar-menu">
         <!-- Main menu -->
         <li><a href="<?php echo View::url(); ?>"><i class="glyphicon glyphicon-home"></i> Dashboard</a></li>
         <li class="submenu">
@@ -9,13 +9,13 @@
                 <span class="caret pull-right"></span>
              </a>
              <ul>
-                <li><a href="<?php echo View::url('region'); ?>">Manage List</a></li>
-                <li><a href="<?php echo View::url('region/add'); ?>">Add Region</a></li>
+                <li><a href="<?php echo View::url('regions'); ?>">Manage List</a></li>
+                <li><a href="<?php echo View::url('regions/add'); ?>">Add Region</a></li>
             </ul>
         </li>
         <li class="submenu">
              <a href="#">
-                <i class="glyphicon glyphicon glyphicon-copyright-mark"></i> Suburb / City
+                <i class="glyphicon glyphicon-copyright-mark"></i> Suburb / City
                 <span class="caret pull-right"></span>
              </a>
              <ul>
@@ -23,18 +23,26 @@
                 <li><a href="<?php echo View::url('suburb/add'); ?>">Add Suburb</a></li>
             </ul>
         </li>
-        <li><a href="<?php echo View::url(); ?>"><i class="glyphicon glyphicon-list"></i> Book It Type</a></li>
-        <li><a href="<?php echo View::url(); ?>"><i class="glyphicon glyphicon-record"></i> Book Type</a></li>
-        <!-- <li class="submenu">
+        <li class="submenu">
              <a href="#">
-                <i class="glyphicon glyphicon-list"></i> Pages
+                <i class="glyphicon glyphicon-list"></i> Book It Type
                 <span class="caret pull-right"></span>
              </a>
              <ul>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="signup.html">Signup</a></li>
+                <li><a href="<?php echo View::url('bookittype'); ?>">Manage List</a></li>
+                <li><a href="<?php echo View::url('bookittype/add'); ?>">Add Bookittype</a></li>
             </ul>
-        </li> -->
+        </li>
+        <li class="submenu">
+             <a href="#">
+                <i class="glyphicon glyphicon-list"></i> Type
+                <span class="caret pull-right"></span>
+             </a>
+             <ul>
+                <li><a href="<?php echo View::url('type'); ?>">Manage List</a></li>
+                <li><a href="<?php echo View::url('type/add'); ?>">Add Type</a></li>
+            </ul>
+        </li>
 
     </ul>
  </div>

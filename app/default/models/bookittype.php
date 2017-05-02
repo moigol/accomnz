@@ -1,5 +1,5 @@
 <?php
-class Region_model extends Model 
+class Bookittype_model extends Model 
 {
     function __construct() {
         parent::__construct();
@@ -17,17 +17,17 @@ class Region_model extends Model
         View::$segments = $this->segment;
     }
        
-    function getRegion($ID)
+    function bookittype($ID)
     {
-        $sql = "SELECT * FROM regions WHERE id = ".$ID." LIMIT 1";
-        $userdata = $this->db->get_row($sql);
+        $sql = "SELECT * FROM bookit_type WHERE id = ".$ID." LIMIT 1";
+        $data = $this->db->get_row($sql);
         
-        return $userdata;
+        return $data;
     } 
     
-    function getRegions()
+    function bookittypes()
     {
-        $sql = "SELECT * FROM regions";    
+        $sql = "SELECT * FROM bookit_type ORDER BY display_order";    
         
         $query = &$this->db->prepare($sql);
         $query->execute();
@@ -38,40 +38,40 @@ class Region_model extends Model
         unset($query);
         
         return $data;
-    } 
+    }
     
     function doSave()
     {
         if($this->post) { 
             if(isset($this->post['action'])) {
                 switch($this->post['action']) {
-                    case "updateregion": {
-                        $subbid = $this->post['regionid'];
+                    case "updatebookittype": {
+                        $bookittypeid = $this->post['bookittypeid'];
                         $data = $this->post;
                         unset($data['action']);
-                        unset($data['regionid']);
+                        unset($data['bookittypeid']);
                         
                         
                         $this->setSession('message',"Region has been updated!");
 
-                        $subbID = $this->db->update("regions", $data, array('id' => $subbid));
+                        $bookittypeID = $this->db->update("bookit_type", $data, array('id' => $bookittypeid));
                         
-                        App::activityLog("Updated Region #ID-".$subbid.'.');
+                        App::activityLog("Updated Book it type #ID-".$bookittypeid.'.');
                         
                     } break;
-                    case "addregion": {
+                    case "addbookittype": {
 
                         $data = $this->post;
                         unset($data['action']);
 
-                        $subbid = $this->db->insert("regions", $data);
+                        $bookittypeID = $this->db->insert("bookit_type", $data);
 
-                        if($subbid) {
+                        if($bookittypeID) {
                             
-                            $this->setSession('message',"New region has been registered!");
+                            $this->setSession('message',"New Book it type has been registered!");
                         }
 
-                        App::activityLog("Added region #ID-".$subbid.'.');
+                        App::activityLog("Added Book it type #ID-".$bookittypeID.'.');
                     } break;
                 } 
             }
@@ -84,10 +84,10 @@ class Region_model extends Model
     function doDelete($ID)
     {
         $where = array('id' => $ID);        
-        $this->setSession('message',"Region has been deleted!");        
-        $rowCount = $this->db->delete("regions", $where);
+        $this->setSession('message',"Book it type has been deleted!");        
+        $rowCount = $this->db->delete("bookit_type", $where);
         
-        App::activityLog("Deleted Region #ID-".$ID.'.');
+        App::activityLog("Deleted Book it type #ID-".$ID.'.');
     }
     
     public function commonAssets()

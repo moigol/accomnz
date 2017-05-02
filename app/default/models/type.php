@@ -1,5 +1,5 @@
 <?php
-class Regions_model extends Model 
+class Type_model extends Model 
 {
     function __construct() {
         parent::__construct();
@@ -17,17 +17,17 @@ class Regions_model extends Model
         View::$segments = $this->segment;
     }
        
-    function getRegion($ID)
+    function getType($ID)
     {
-        $sql = "SELECT * FROM regions WHERE id = ".$ID." LIMIT 1";
-        $userdata = $this->db->get_row($sql);
+        $sql = "SELECT * FROM type WHERE id = ".$ID." LIMIT 1";
+        $data = $this->db->get_row($sql);
         
-        return $userdata;
+        return $data;
     } 
     
-    function getRegions()
+    function getTypes()
     {
-        $sql = "SELECT * FROM regions ORDER BY region";    
+        $sql = "SELECT * FROM type";    
         
         $query = &$this->db->prepare($sql);
         $query->execute();
@@ -39,57 +39,39 @@ class Regions_model extends Model
         
         return $data;
     }
-
-    function getRegionByID($ID)
-    {
-        if($ID) {            
-        
-            $sql = "SELECT * FROM regions WHERE id = '$ID' LIMIT 1";
-
-            $query = &$this->db->prepare($sql);
-            $query->execute();
-            $row = $query->fetch(PDO::FETCH_CLASS);
-            unset($query);
-            
-            return json_encode($row);
-
-        } else {
-            return false;
-        }
-    }
     
     function doSave()
     {
         if($this->post) { 
             if(isset($this->post['action'])) {
                 switch($this->post['action']) {
-                    case "updateregion": {
-                        $regid = $this->post['regid'];
+                    case "updatetype": {
+                        $typeid = $this->post['typeid'];
                         $data = $this->post;
                         unset($data['action']);
-                        unset($data['regid']);
+                        unset($data['typeid']);
                         
                         
-                        $this->setSession('message',"Region has been updated!");
+                        $this->setSession('message',"Type has been updated!");
 
-                        $regID = $this->db->update("regions", $data, array('id' => $regid));
+                        $typeID = $this->db->update("type", $data, array('id' => $typeid));
                         
-                        App::activityLog("Updated Region #ID-".$prid.'.');
+                        App::activityLog("Updated Type #ID-".$typeid.'.');
                         
                     } break;
-                    case "addregion": {
+                    case "addtype": {
 
                         $data = $this->post;
                         unset($data['action']);
 
-                        $prodID = $this->db->insert("regions", $data);
+                        $typeID = $this->db->insert("type", $data);
 
-                        if($prodID) {
+                        if($typeID) {
                             
-                            $this->setSession('message',"New Region has been registered!");
+                            $this->setSession('message',"Type has been registered!");
                         }
 
-                        App::activityLog("Added Region #ID-".$prodID.'.');
+                        App::activityLog("Added Type #ID-".$typeID.'.');
                     } break;
                 } 
             }
@@ -102,10 +84,10 @@ class Regions_model extends Model
     function doDelete($ID)
     {
         $where = array('id' => $ID);        
-        $this->setSession('message',"Region has been deleted!");        
-        $rowCount = $this->db->delete("regions", $where);
+        $this->setSession('message',"Type has been deleted!");        
+        $rowCount = $this->db->delete("type", $where);
         
-        App::activityLog("Deleted Region #ID-".$ID.'.');
+        App::activityLog("Deleted type #ID-".$ID.'.');
     }
     
     public function commonAssets()

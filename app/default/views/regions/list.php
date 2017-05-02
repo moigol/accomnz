@@ -1,5 +1,5 @@
 <?php 
-View::$title = 'Suburbs List';
+View::$title = 'Region List';
 View::$bodyclass = User::info('Sidebar');
 View::header(); 
 ?>
@@ -15,29 +15,31 @@ View::header();
          <table cellpadding="0" cellspacing="0" border="0" class="datatable table table-striped table-bordered">
             <thead>
                 <tr class="headings">
-                    <th class="sort-this">Suburb</th>
+                    <th class="sort-this">Region</th>
+                    <th>Island</th>
                     <th>Lng</th>
-                    <th>Lat</th> 
-                    <th>Suburb Code</th>  
-                    <th>Region Code</th>
+                    <th>Lat</th>
+                    <th>Start Zoom</th> 
+                    <th>Book It Code</th>  
                     <th class="no-sorting text-center">Action</th>
                 </tr>
             </thead>
             <tbody>
                 <?php 
                 $cntr = 0;
-                if(count($suburbs)) {
-                foreach($suburbs as $suburb) { $cntr++;
+                if(count($regions)) {
+                foreach($regions as $reg) { $cntr++;
                 ?>
                 <tr class="<?php echo ($cntr % 2) == 0 ? 'even' : 'odd'; ?> pointer">
-                    <td><?php echo $suburb->suburb; ?></td>
-                    <td><?php echo $suburb->lng; ?></td>
-                    <td><?php echo $suburb->lat; ?></td>
-                    <td><?php echo $suburb->suburb_code; ?></td>
-                    <td><?php echo $suburb->region_code; ?></td>
+                    <td><?php echo $reg->region; ?></td>
+                    <td><?php echo $reg->island; ?></td>
+                    <td><?php echo $reg->lng; ?></td>
+                    <td><?php echo $reg->lat; ?></td>
+                    <td><?php echo $reg->startZoom; ?></td>
+                    <td><?php echo $reg->bookit_code; ?></td>
                     <td class="text-center">
-                        <a href="<?php echo View::url('suburb/edit/'.$suburb->id); ?>" title="Edit" class="green btn-xs btn-warning">Edit</a> 
-                        &nbsp;&nbsp;|&nbsp;&nbsp; <a href="<?php echo View::url('suburb/delete/'.$suburb->id); ?>" title="Delete" onclick="return confirm('Are you sure you want to delete <?php echo $suburb->suburb; ?>?');" class="red btn-xs btn-danger">Delete</a>
+                        <a href="<?php echo View::url('regions/edit/'.$reg->id); ?>" title="Edit" class="green btn-xs btn-warning">Edit</a> 
+                        &nbsp;&nbsp;|&nbsp;&nbsp; <a href="<?php echo View::url('regions/delete/'.$reg->id); ?>" title="Delete" onclick="return confirm('Are you sure you want to delete <?php echo $reg->region; ?>?');" class="red btn-xs btn-danger">Delete</a>
                     </td>
                 </tr>
                 <?php } 
