@@ -24,7 +24,7 @@ $env = Config::get('ENVIRONMENT');
                         $dropdown = array(
                             'new_user_role' => $levels,
                             'time_zone' => $timezones = timezone_identifiers_list(),
-                            'site_language' => GAUtility::getLanguagesAsOption()
+                            'site_language' => Utility::getLanguagesAsOption()
                         );
                         ?>
                         <form class="form-horizontal form-label-left input_mask" enctype="multipart/form-data" method="post">

@@ -34,7 +34,7 @@
                 </li>
                 <li class="">                    
                     <select class="form-control" name="Language" id="LanguageChanger" rel="<?php echo View::url('changelanguage'); ?>">
-                        <?php foreach(GAUtility::getLanguages() as $k => $v) { ?> 
+                        <?php foreach(Utility::getLanguages() as $k => $v) { ?> 
                             <option value="<?php echo $k; ?>" <?php echo (User::info('Language') == $k) ? 'selected' : ''; ?> ><?php echo $v; ?></option>
                         <?php } ?>
                     </select>

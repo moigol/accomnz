@@ -9,12 +9,13 @@ class Users extends Controller
         $this->load->model('auth');        
         
         // Load vendor class
-        $this->load->vendor('gautility');
+        $this->load->vendor('utility');
     }
 
     public function index()
     {    
         if($this->auth->isLoggedIn()) {
+            $this->model->indexAssets();
             $users = $this->model->getUsers();        
             View::page('users/list', get_defined_vars());
         } else {            
@@ -71,18 +72,7 @@ class Users extends Controller
             View::redirect('users/login');
         }   
     }
-    
-    public function trash()
-    {
-        if($this->auth->isLoggedIn()) {
-            $user = $this->model->doTrash($this->segment[2]);
-            View::redirect('users/');
-        } else {       
-            View::redirect('users/login');
-        }     
         
-    }
-    
     public function restore()
     {
         if($this->auth->isLoggedIn()) {
@@ -98,35 +88,22 @@ class Users extends Controller
     {
         if($this->auth->isLoggedIn()) {
             $user = $this->model->doDelete($this->segment[2]);
-            View::redirect('users/trashbin/');
+            View::redirect('users');
         } else {       
             View::redirect('users/login');
         }     
         
     }
     
-    public function emptytrashbin()
-    {
-        if($this->auth->isLoggedIn()) {
-            $user = $this->model->doEmptyTrash();
-            View::redirect('users/trashbin/');
-        } else {       
-            View::redirect('users/login');
-        }     
         
-    }
-    
     public function edit()
     {
-        $rolesModel = $this->load->model('role', true, true);
+        //$rolesModel = $this->load->model('role', true, true);
         if($this->auth->isLoggedIn()) {  
             $this->model->doSave();
-            $this->model->indexAssets();
+            $this->model->commonAssets();
             $user = $this->model->getUser($this->segment[2]);
             $levels = $this->model->getUserLevels();
-            $roles = $rolesModel->getLevels();
-            $loadedcapa = isset($this->segment[3]) ? Level::capabilities($this->segment[3]) : false;
-            $capabilities =  $this->model->getCapabilities();
             View::page('users/edit', get_defined_vars());
         } else {       
             View::redirect('users/login');
@@ -136,12 +113,9 @@ class Users extends Controller
     
     public function add()
     {
-        if($this->auth->isLoggedIn()) {
-            
-            $pdata = $this->model->doSave();
-            
-            $this->model->commonAssets();
-                        
+        if($this->auth->isLoggedIn()) {            
+            $pdata = $this->model->doSave();            
+            $this->model->commonAssets();                        
             $levels = $this->model->getUserLevels();
             View::page('users/add', get_defined_vars());
         } else {       

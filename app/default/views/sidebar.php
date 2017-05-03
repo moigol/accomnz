@@ -43,6 +43,17 @@
                 <li><a href="<?php echo View::url('type/add'); ?>">Add Type</a></li>
             </ul>
         </li>
+        
+        <li class="submenu">
+             <a href="#">
+                <i class="glyphicon glyphicon-user"></i> Users
+                <span class="caret pull-right"></span>
+             </a>
+             <ul>
+                <li><a href="<?php echo View::url('users'); ?>">Manage List</a></li>
+                <li><a href="<?php echo View::url('users/add'); ?>">Add User</a></li>
+            </ul>
+        </li>
 
     </ul>
  </div>

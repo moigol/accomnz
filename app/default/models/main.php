@@ -23,7 +23,7 @@ class Main_model extends Model
             $info = User::info(false,$ID);
 
             if($info->UserLevel == 'Agency') {
-                $groupIDs = GAUtility::getChildren($ID);
+                $groupIDs = Utility::getChildren($ID);
                 $sql = "SELECT a.AccountStatus, COUNT(*) AS 'count'  FROM accounts a LEFT JOIN users u ON u.UserID = a.UserID WHERE a.AccountStatus IN ('Approved', 'Pending', 'On Hold', 'Rejected') AND a.Active = 1 AND (u.ReferrerUserID IN($groupIDs) OR u.SecondReferrerUserID IN($groupIDs)) GROUP BY a.AccountStatus";
 
             } else {         

@@ -156,13 +156,13 @@ View::header();
                                             <div class="form-group">
                                                 <label class="control-label col-md-2 col-sm-3 col-xs-12"><?php echo Lang::get('USR_PRF_PLANG'); ?></label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <?php View::form('selecta',array('name'=>'meta[Language]','options'=>GAUtility::getLanguages(),'class'=>'form-control','value'=>$userinfo->Language)); ?>
+                                                    <?php View::form('selecta',array('name'=>'meta[Language]','options'=>Utility::getLanguages(),'class'=>'form-control','value'=>$userinfo->Language)); ?>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-md-2 col-sm-3 col-xs-12">Default Sidebar</label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                                    <?php View::form('selecta',array('name'=>'meta[Sidebar]','options'=>GAUtility::getSidebars(),'class'=>'form-control','value'=>$userinfo->Sidebar)); ?>
+                                                    <?php View::form('selecta',array('name'=>'meta[Sidebar]','options'=>Utility::getSidebars(),'class'=>'form-control','value'=>$userinfo->Sidebar)); ?>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -236,7 +236,7 @@ View::header();
                                                 <label class="control-label col-md-2 col-sm-3 col-xs-12"><?php echo Lang::get('USR_PRF_CNTRY'); ?></label>
                                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                                     <select name="meta[Country]" class="form-control form-control col-md-10">
-                                                        <?php foreach(GAUtility::getCountries() as $country) { ?>
+                                                        <?php foreach(Utility::getCountries() as $country) { ?>
                                                         <option value="<?php echo $country; ?>" <?php echo $userinfo->Country == $country ? 'selected' : ''; ?>><?php echo $country; ?></option>
                                                         <?php } ?>
                                                     </select>

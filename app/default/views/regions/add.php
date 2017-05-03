@@ -1,5 +1,5 @@
 <?php 
-View::$title = 'Edit Region';
+View::$title = 'Add Region';
 View::$bodyclass = User::info('Sidebar');
 View::header(); 
 ?>

@@ -30,8 +30,8 @@
                                     <li class="dropdown">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
                                         <ul class="dropdown-menu animated fadeInUp">
-                                            <li><a href="profile.html">Profile</a></li>
-                                            <li><a href="login.html">Logout</a></li>
+                                            <li><a href="<?php echo View::url('users/edit/'.$userinfo->UserID); ?>">Profile</a></li>
+                                            <li><a href="<?php echo View::url('users/logout'); ?>">Logout</a></li>
                                         </ul>
                                     </li>
                                 </ul>

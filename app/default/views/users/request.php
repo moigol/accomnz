@@ -30,7 +30,7 @@ View::header('users');
                     <div class="separator">
                     <div>
                         <select class="form-control" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-                            <?php foreach(GAUtility::getLanguages() as $k => $v) { ?> 
+                            <?php foreach(Utility::getLanguages() as $k => $v) { ?> 
                                 <option value="<?php echo View::url('users/login/'.$k); ?>" <?php echo ($segment == $k) ? 'selected' : ''; ?> ><?php echo $v; ?></option>
                             <?php } ?>
                         </select>

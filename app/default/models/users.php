@@ -4,6 +4,16 @@ class Users_model extends Model
     function __construct() {
         parent::__construct();
         
+        View::$footerscripts = array(
+            'assets/jquery/jquery.js',
+            'assets/jquery/jquery-ui.js',
+            'assets/bootstrap/js/bootstrap.min.js'
+            );   
+
+        View::$styles = array(
+            'assets/jquery/jquery-ui.css',
+            'assets/bootstrap/css/bootstrap.min.css'
+            );
         View::$segments = $this->segment;
     }
     
@@ -196,23 +206,13 @@ class Users_model extends Model
                     $user = $this->post['user'];
                     $meta = $this->post['meta'];
 
-                    if(isset($user['ReferrerUserID'])){
-                        $user['ReferrerUserID'] = preg_replace("/[^0-9,.]/", "", $user['ReferrerUserID']);
-                    }
-
-                    if(isset($user['SecondReferrerUserID'])){
-                        $user['SecondReferrerUserID'] = preg_replace("/[^0-9,.]/", "", $user['SecondReferrerUserID']);
-                    }
-
                     unset($data['action']);
 
                     if(isset($this->post['Password']) && $this->post['Password'] != '') {
                         $pass = $this->encrypt($this->post['Password']);
                         $user['Password'] = $pass;
-                    }
-
-                    if(isset($this->post['capabilities']) && count($this->post['capabilities'])) {
-                        $user['Capability'] = $this->arrayToString($this->post['capabilities']);
+                    } else {
+                        $user['Password'] = $this->encrypt($user['Password']);
                     }
 
                     $userID = $this->db->update("users", $user, $uwhere);
@@ -240,19 +240,14 @@ class Users_model extends Model
 
                     unset($data['action']);
 
-                    $user['Password'] = $this->generatePw(10);
+                    $user['Password'] = $this->encrypt($user['Password']);
                     $user['Active'] = 1;
+                    $user['Level'] = 1;
                     $user['HashKey'] = md5(microtime());
                     $user['DateAdded'] = date('Y-m-d H:i:s');
                     $user['Capability']=Level::info('Capability',isset($user['Level']) ? $user['Level'] : Option::get('new_user_role'));
 
-                    if(isset($user['ReferrerUserID'])){
-                        $user['ReferrerUserID'] = preg_replace("/[^0-9,.]/", "", $user['ReferrerUserID']);
-                    }
-                    if(isset($user['SecondReferrerUserID'])){
-                        $user['SecondReferrerUserID'] = preg_replace("/[^0-9,.]/", "", $user['SecondReferrerUserID']);
-                    }
-
+                    
                     if(User::infoByEmail('UserID',$user['Email'])) {
                         $this->setSession('error', "Email already exists");
                         $this->setSession('message',"");
@@ -303,27 +298,6 @@ class Users_model extends Model
         }
         return (object) $this->post;
         
-    }   
-    
-    function doTrash($UserID)
-    {
-        $where = array('UserID' => $UserID);
-        $data = array('Active' => 0);
-        $rowCount = $this->db->update("users",$data, $where);
-        $rowCount = $this->db->update("accounts",$data, $where);
-        
-        
-        App::activityLog("Trashed User #".$UserID.'.');
-    }
-    
-    function doRestore($UserID)
-    {
-        $where = array('UserID' => $UserID);
-        $data = array('Active' => 1);
-        $rowCount = $this->db->update("users",$data, $where);
-        $rowCount = $this->db->update("accounts",$data, $where);
-        
-        App::activityLog("Restored User #".$UserID.'.');
     }
     
     function doDelete($UserID)
@@ -331,44 +305,39 @@ class Users_model extends Model
         $where = array('UserID' => $UserID);
         $rowCount = $this->db->delete("users", $where);
         $rowCount = $this->db->delete("user_meta", $where);
-        $rowCount = $this->db->delete("accounts", $where);
-        $rowCount = $this->db->delete("account_meta", $where);
-        $rowCount = $this->db->delete("bank_accounts", $where);
         
         App::activityLog("Deleted User #".$UserID.'.');
     }
     
-    function doEmptyTrash($UserID)
-    {
-        $where = array('Active' => 0);
-        $rowCount = $this->db->delete("users", $where);
-        $rowCount = $this->db->delete("accounts", $where);
-        $rowCount = $this->db->delete("bank_accounts", $where);
-        
-        App::activityLog("Emptied Trashed users");
-    }
-    
     public function commonAssets()
     {
-        View::$footerscripts[] = 'vendor/bootstrap-progressbar/bootstrap-progressbar.min.js';            
-        View::$footerscripts[] = 'vendor/switchery/dist/switchery.min.js';
-        View::$footerscripts[] = 'vendor/iCheck/icheck.min.js';            
-        View::$footerscripts[] = 'vendor/tinymce/tinymce.min.js';            
-        View::$footerscripts[] = 'assets/js/fileinput.js';
-        View::$footerscripts[] = 'vendor/devbridge-autocomplete/dist/jquery.autocomplete.min.js';                        
+        View::$footerscripts[] = "vendors/datatables/js/jquery.dataTables.min.js";
+        View::$footerscripts[] = "vendors/datatables/dataTables.bootstrap.js";
+        View::$footerscripts[] = 'assets/js/tables.js';
         View::$footerscripts[] = 'assets/js/custom.js';
-        View::$footerscripts[] = 'assets/js/profile.js';
-        View::$footerscripts[] = 'vendor/validator/validator.min.js';
-        View::$footerscripts[] = 'assets/js/pw.js';
 
-
-        View::$styles[] = 'vendor/iCheck/skins/flat/green.css';
-        View::$styles[] = 'assets/css/fileinput.css';
+        View::$styles[] = 'assets/css/calendar.css';
+        View::$styles[] = 'assets/css/buttons.css';
+        View::$styles[] = 'assets/css/forms.css';
+        View::$styles[] = 'assets/css/stats.css';
+        View::$styles[] = 'assets/css/styles.css';
+        View::$styles[] = "vendors/datatables/dataTables.bootstrap.css";
     }
-    
+
     public function indexAssets()
     {
-        
+        View::$footerscripts[] = "vendors/datatables/js/jquery.dataTables.min.js";
+        View::$footerscripts[] = "vendors/datatables/dataTables.bootstrap.js";
+        View::$footerscripts[] = 'assets/js/tables.js';
+        View::$footerscripts[] = 'assets/js/custom.js';
+
+        View::$styles[] = 'assets/css/calendar.css';
+        View::$styles[] = 'assets/css/buttons.css';
+        View::$styles[] = 'assets/css/forms.css';
+        View::$styles[] = 'assets/css/stats.css';
+        View::$styles[] = 'assets/css/styles.css';
+        View::$styles[] = "vendors/datatables/dataTables.bootstrap.css";
+
     }
     
     function doLogout()
