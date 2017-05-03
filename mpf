@@ -1,4 +1,4 @@
-ENVIRONMENT=production
+ENVIRONMENT=development
 DEBUG=true
 TEMPLATE=default
 
@@ -10,7 +10,7 @@ SITE_URI=http://cutearts.org
 SITE_TAGLINE=Rapid Development Framework
 SITE_COPYRIGHT=Copyright © 2015 MyPHPFrame. All rights reserved
 
-PRODUCTION=http://moises.webtonic.co.nz/manage/
+PRODUCTION=http://moises.webtonic.co.nz/manage
 DB_HOST=localhost
 DB_NAME=moiseswe_booknstay
 DB_USER=moiseswe_bnsuser
