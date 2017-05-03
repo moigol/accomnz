@@ -36,6 +36,7 @@ class Users extends Controller
         
     public function login()
     {
+        $this->model->indexAssets();
         if($this->auth->isLoggedIn()) {
             View::redirect();
         } else {     
