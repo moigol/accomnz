@@ -1970,3 +1970,4 @@
 [01-May-2017 13:07:07 Europe/Berlin] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\accomnz\app\default\views\suburb\edit.php on line 70
 [01-May-2017 13:07:07 Europe/Berlin] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\accomnz\app\default\views\suburb\edit.php on line 76
 [01-May-2017 13:07:07 Europe/Berlin] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\accomnz\app\default\views\suburb\edit.php on line 82
+[03-May-2017 09:15:30 Europe/Berlin] PHP Notice:  Undefined property: stdClass::$Password in C:\xampp\htdocs\accomnz\app\default\models\users.php on line 25
