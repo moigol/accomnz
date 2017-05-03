@@ -10,11 +10,11 @@ SITE_URI=http://cutearts.org
 SITE_TAGLINE=Rapid Development Framework
 SITE_COPYRIGHT=Copyright © 2015 MyPHPFrame. All rights reserved
 
-PRODUCTION=http://localhost/accomnz
+PRODUCTION=http://moises.webtonic.co.nz/manage/
 DB_HOST=localhost
-DB_NAME=accomnz
-DB_USER=accomnz
-DB_PASS=dev123890
+DB_NAME=moiseswe_booknstay
+DB_USER=moiseswe_bnsuser
+DB_PASS=BNS123$%^
 
 STAGING=http://staging.myphpframe.com
 STAGE_HOST=localhost
