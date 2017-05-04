@@ -39,7 +39,7 @@ View::header();
                     
                     <td class="text-center">
                         <a href="<?php echo View::url('users/edit/'.$user->UserID); ?>" title="Edit" class="green btn-xs btn-warning">Edit</a> 
-                        <?php if($user->UserID != 100000) { ?>
+                        <?php if($user->UserID != 100000 && $user->UserID != User::info('UserID')) {  ?>
                         &nbsp;&nbsp;|&nbsp;&nbsp; <a href="<?php echo View::url('users/delete/'.$user->UserID); ?>" title="Delete" onclick="return confirm('Are you sure you want to delete <?php echo $user->UserID; ?>?');" class="red btn-xs btn-danger">Delete</a>
                         <?php } ?>
                     </td>

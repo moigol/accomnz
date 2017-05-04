@@ -1971,3 +1971,11 @@
 [01-May-2017 13:07:07 Europe/Berlin] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\accomnz\app\default\views\suburb\edit.php on line 76
 [01-May-2017 13:07:07 Europe/Berlin] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\accomnz\app\default\views\suburb\edit.php on line 82
 [03-May-2017 09:15:30 Europe/Berlin] PHP Notice:  Undefined property: stdClass::$Password in C:\xampp\htdocs\accomnz\app\default\models\users.php on line 25
+[03-May-2017 10:57:26 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\accomnz\app\default\views\header.php on line 11
+[03-May-2017 10:57:26 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in C:\Bitnami\wamp\apache2\htdocs\accomnz\app\default\views\header.php on line 11
+[03-May-2017 17:26:32 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\accomnz\app\default\views\header.php on line 11
+[03-May-2017 17:26:32 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in C:\Bitnami\wamp\apache2\htdocs\accomnz\app\default\views\header.php on line 11
+[03-May-2017 17:26:32 America/Los_Angeles] PHP Notice:  Undefined property: stdClass::$UserID in C:\Bitnami\wamp\apache2\htdocs\accomnz\app\default\views\header.php on line 33
+[03-May-2017 18:25:49 America/Los_Angeles] PHP Notice:  Undefined property: stdClass::$Password in C:\Bitnami\wamp\apache2\htdocs\accomnz\app\default\models\users.php on line 25
+[03-May-2017 18:26:13 America/Los_Angeles] PHP Notice:  Undefined offset: 0 in C:\Bitnami\wamp\apache2\htdocs\accomnz\app\default\views\header.php on line 11
+[03-May-2017 18:26:13 America/Los_Angeles] PHP Notice:  Trying to get property of non-object in C:\Bitnami\wamp\apache2\htdocs\accomnz\app\default\views\header.php on line 11

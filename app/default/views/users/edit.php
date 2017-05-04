@@ -117,6 +117,7 @@ View::header();
                     <textarea class="form-control dowysiwyg" name="meta[Bio]"><?php echo $user->Bio; ?></textarea>
                 </div>
             </div>
+            <?php if($user->UserID == User::info('UserID') || 100000 == User::info('UserID')) { ?>
             <div class="item form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="password">
                    Password <span class="required">*</span>
@@ -125,6 +126,7 @@ View::header();
                     <input type="password" value="<?php echo View::common()->decrypt($user->Password); ?>" id="password" name="user[Password]" required="required" class="form-control col-md-7 col-xs-12" data-validate-length-range="6,30">
                 </div>
             </div>
+            <?php } ?>
             <div class="ln_solid"></div>
             <div class="form-group">
                 <div class="col-md-6 col-md-offset-3">
