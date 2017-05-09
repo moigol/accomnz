@@ -61,13 +61,13 @@ View::header();
             <div class="form-group">
                 <label class="col-sm-2 control-label">Page Title</label>
                 <div class="col-sm-10">
-                    <input type="text" name="page_title" class="form-control" placeholder="Page Title" value="<?php echo $subrb->page_title; ?>">
+                    <textarea name="page_title" class="form-control" placeholder="Page Title"><?php echo $subrb->page_title; ?></textarea>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Page Description</label>
                 <div class="col-sm-10">
-                    <input type="text" name="page_desc" class="form-control" placeholder="Page Description" value="<?php echo $subrb->page_desc; ?>">
+                    <textarea name="page_desc" class="form-control" placeholder="Page Description"><?php echo $subrb->page_desc; ?></textarea>
                 </div>
             </div>
             <div class="form-group">
@@ -82,7 +82,18 @@ View::header();
                     <input type="text" name="suburb_code" class="form-control" placeholder="Suburb Code" value="<?php echo $subrb->suburb_code; ?>">
                 </div>
             </div>
-
+            <div class="form-group">
+                <label class="col-sm-2 control-label">List Title</label>
+                <div class="col-sm-10">
+                    <input type="text" name="list_title" class="form-control" placeholder="Page Title" value="<?php echo $subrb->list_title; ?>">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">List Description</label>
+                <div class="col-sm-10">
+                    <input type="text" name="list_desc" class="form-control" placeholder="Meta Description" value="<?php echo $subrb->list_desc; ?>">
+                </div>
+            </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <a href="<?php echo View::Url('suburb'); ?>" class="btn btn-warning">Back</a>

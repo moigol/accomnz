@@ -20,6 +20,8 @@ View::header();
                     <th>Lat</th> 
                     <th>Suburb Code</th>  
                     <th>Region Code</th>
+                    <th>Title</th> 
+                    <th>Description</th> 
                     <th class="no-sorting text-center">Action</th>
                 </tr>
             </thead>
@@ -35,6 +37,8 @@ View::header();
                     <td><?php echo $suburb->lat; ?></td>
                     <td><?php echo $suburb->suburb_code; ?></td>
                     <td><?php echo $suburb->region_code; ?></td>
+                    <td><?php echo $suburb->list_title; ?></td>
+                    <td><?php echo $suburb->list_desc; ?></td>
                     <td class="text-center">
                         <a href="<?php echo View::url('suburb/edit/'.$suburb->id); ?>" title="Edit" class="green btn-xs btn-warning">Edit</a> 
                         &nbsp;&nbsp;|&nbsp;&nbsp; <a href="<?php echo View::url('suburb/delete/'.$suburb->id); ?>" title="Delete" onclick="return confirm('Are you sure you want to delete <?php echo $suburb->suburb; ?>?');" class="red btn-xs btn-danger">Delete</a>

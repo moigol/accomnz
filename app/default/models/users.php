@@ -44,13 +44,9 @@ class Users_model extends Model
     {
         $return = false;
         if(isset($this->post['action']) && $this->post['action'] == 'request') {
-            $userdata = User::info(false,$this->post['usr']); 
+            $userdata = User::infoByEmail(false,$this->post['eml']); 
             if(count($userdata)) {
-                if($userdata->Email == $this->post['eml']) {
-                    $return = $userdata;
-                } else {
-                    $this->setSession('error', 'Email address is not valid for this user!');
-                }
+                $return = $userdata;
             } else {
                 $this->setSession('error', 'User ID doesn\'t exists!');
             }

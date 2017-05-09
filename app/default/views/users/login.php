@@ -17,9 +17,13 @@ View::header('users');
                             <input class="form-control" type="password" placeholder="<?php echo Lang::get('LOGIN_PASSLABEL'); ?>" name="pwd">
                             <div class="action">
                                 <button type="submit" class="btn btn-default submit" href="#"><?php echo Lang::get('LOGIN_BUTTON'); ?></button>
-                            </div>  
+                            </div>                              
                         </form>
                     </div>
+                </div>
+                <div class="already">
+                    <p>Forgot password?</p>
+                    <a href="<?php echo View::url('users/lostpassword'); ?>">Recall</a>
                 </div>
             </div>
         </div>

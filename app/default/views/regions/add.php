@@ -42,6 +42,18 @@ View::header();
                 </div>
             </div>
             <div class="form-group">
+                <label class="col-sm-2 control-label">List Title</label>
+                <div class="col-sm-10">
+                    <textarea name="list_title" class="form-control" placeholder="Page Title"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">List Description</label>
+                <div class="col-sm-10">
+                    <textarea name="list_desc" class="form-control" placeholder="Meta Description"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
                 <label class="col-sm-2 control-label">Page Title</label>
                 <div class="col-sm-10">
                     <input type="text" name="page_title" class="form-control" placeholder="Page Title" value="">
