@@ -18,8 +18,8 @@ View::header();
                     <th width="50">Rank</th>
                     <th>Name</th>
                     <th>Page Title</th> 
-                    <th>Page Desc</th>
-                    <th>Page key</th>
+                    <th>Meta Desc</th>
+                    <th>Meta key</th>
                     <th class="no-sorting text-center">Action</th>
                 </tr>
             </thead>

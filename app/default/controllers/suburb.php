@@ -33,7 +33,7 @@ class Suburb extends Controller
         $regions = $this->load()->model('regions',true,true);
         $this->model->doSave();
             
-        $this->model->indexAssets();
+        $this->model->commonAssets();
         $subrb = $this->model->getSuburb($this->segment[2]);
    
         $regs = $regions->getRegions();
@@ -45,7 +45,7 @@ class Suburb extends Controller
     {
         $regions = $this->load()->model('regions',true,true);
         $this->model->doSave();
-        $this->model->indexAssets();
+        $this->model->commonAssets();
    
         $regs = $regions->getRegions();
         // $items = $this->model->getProductItemsRelated($this->segment[2]); 

@@ -43,33 +43,36 @@ View::header();
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">List Title</label>
+                <label class="col-sm-2 control-label">Page Heading</label>
                 <div class="col-sm-10">
-                    <textarea name="list_title" class="form-control" placeholder="Page Title"><?php echo $region->list_title; ?></textarea>
+                    <textarea name="list_title" class="form-control" placeholder="Page Heading"><?php echo $region->list_title; ?></textarea>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">List Description</label>
+                <label class="col-sm-2 control-label">Page Content</label>
                 <div class="col-sm-10">
-                    <textarea input type="text" name="list_desc" class="form-control" placeholder="Meta Description"><?php echo $region->list_desc; ?></textarea>
+                    <textarea name="list_desc"><?php echo ($region->list_desc) ? $region->list_desc : ''; ?></textarea>
+                    <script>
+                        CKEDITOR.replace( 'list_desc' );
+                    </script>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Page Title</label>
                 <div class="col-sm-10">
-                    <input type="text" name="page_title" class="form-control" placeholder="Page Title" value="<?php echo $region->page_title; ?>">
+                    <textarea name="page_title" class="form-control" placeholder="Page Title"><?php echo $region->page_title; ?></textarea>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Meta Description</label>
                 <div class="col-sm-10">
-                    <input type="text" name="meta_desc" class="form-control" placeholder="Meta Description" value="<?php echo $region->meta_desc; ?>">
+                    <textarea name="meta_desc" class="form-control" placeholder="Meta Description"><?php echo $region->meta_desc; ?></textarea>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Meta Key</label>
                 <div class="col-sm-10">
-                    <input type="text" name="meta_key" class="form-control" placeholder="Meta Key" value="<?php echo $region->meta_key; ?>">
+                    <textarea name="meta_key" class="form-control" placeholder="Meta Key"><?php echo $region->meta_key; ?></textarea>
                 </div>
             </div>
             <div class="form-group">

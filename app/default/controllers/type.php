@@ -30,7 +30,7 @@ class Type extends Controller
     
     public function edit()
     {
-        $this->model->indexAssets();
+        $this->model->commonAssets();
         $this->model->doSave();   
         $type = $this->model->getType($this->segment[2]);
         View::page('type/edit', get_defined_vars());  
@@ -39,7 +39,7 @@ class Type extends Controller
     public function add()
     {
         $this->model->doSave();
-        $this->model->indexAssets();
+        $this->model->commonAssets();
         View::page('type/add', get_defined_vars());  
     }
 }

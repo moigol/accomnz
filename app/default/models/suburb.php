@@ -54,6 +54,8 @@ class Suburb_model extends Model
                         
                         $this->setSession('message',"Suburb has been updated!");
 
+                        //$data['list_desc'] = $this->encrypt($data['list_desc']);
+
                         $subbID = $this->db->update("suburb", $data, array('id' => $subbid));
                         
                         App::activityLog("Updated Suburb #ID-".$subbid.'.');
@@ -64,6 +66,8 @@ class Suburb_model extends Model
                         $data = $this->post;
                         unset($data['action']);
 
+                        //$data['list_desc'] = $this->encrypt($data['list_desc']);
+                        
                         $subbid = $this->db->insert("suburb", $data);
 
                         if($subbid) {
@@ -92,6 +96,8 @@ class Suburb_model extends Model
     
     public function commonAssets()
     {
+        View::$scripts[] = 'assets/js/ckeditor/ckeditor.js';
+
         View::$footerscripts[] = "vendors/datatables/js/jquery.dataTables.min.js";
         View::$footerscripts[] = "vendors/datatables/dataTables.bootstrap.js";
         View::$footerscripts[] = 'assets/js/tables.js';

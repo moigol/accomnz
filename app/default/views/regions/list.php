@@ -20,8 +20,8 @@ View::header();
                     <th>Lng</th>
                     <th>Lat</th>
                     <th>Start Zoom</th> 
-                    <th>Title</th> 
-                    <th>Description</th> 
+                    <th>Page Heading</th> 
+                    <th>Page Content</th> 
                     <th>Book It Code</th>  
                     <th class="no-sorting text-center">Action</th>
                 </tr>
@@ -39,7 +39,7 @@ View::header();
                     <td><?php echo $reg->lat; ?></td>
                     <td><?php echo $reg->startZoom; ?></td>
                     <td><?php echo $reg->list_title; ?></td>
-                    <td><?php echo $reg->list_desc; ?></td>
+                    <td><?php echo ($reg->list_desc) ? $reg->list_desc : ''; ?></td>
                     <td><?php echo $reg->bookit_code; ?></td>
                     <td class="text-center">
                         <a href="<?php echo View::url('regions/edit/'.$reg->id); ?>" title="Edit" class="green btn-xs btn-warning">Edit</a> 

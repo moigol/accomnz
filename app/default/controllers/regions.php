@@ -30,7 +30,7 @@ class Regions extends Controller
     
     public function edit()
     {
-        $this->model->indexAssets();
+        $this->model->commonAssets();
         $this->model->doSave();   
         $region = $this->model->getRegion($this->segment[2]);
         View::page('regions/edit', get_defined_vars());  
@@ -39,7 +39,7 @@ class Regions extends Controller
     public function add()
     {
         $this->model->doSave();
-        $this->model->indexAssets();
+        $this->model->commonAssets();
         View::page('regions/add', get_defined_vars());  
     }
 }

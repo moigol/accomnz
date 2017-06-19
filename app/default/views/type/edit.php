@@ -28,33 +28,36 @@ View::header();
                 </div>
             </div>    
             <div class="form-group">
-                <label class="col-sm-2 control-label">List Title</label>
+                <label class="col-sm-2 control-label">Page Heading</label>
                 <div class="col-sm-10">
-                    <textarea name="list_title" class="form-control" placeholder="Page Title"><?php echo $type->list_title; ?></textarea>
+                    <textarea name="list_title" class="form-control" placeholder="Page Heading"><?php echo $type->list_title; ?></textarea>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">List Description</label>
+                <label class="col-sm-2 control-label">Page Content</label>
                 <div class="col-sm-10">
-                    <textarea name="list_desc" class="form-control" placeholder="Meta Description"><?php echo $type->list_desc; ?></textarea>
+                    <textarea name="list_desc"><?php echo $type->list_desc; ?></textarea>
+                    <script>
+                        CKEDITOR.replace( 'list_desc' );
+                    </script>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Page Title</label>
                 <div class="col-sm-10">
-                    <input type="text" name="page_title" class="form-control" placeholder="Page Title" value="<?php echo $type->page_title; ?>" />
+                    <textarea name="page_title" class="form-control" placeholder="Page Title"><?php echo $type->page_title; ?></textarea>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Page Description</label>
+                <label class="col-sm-2 control-label">Meta Description</label>
                 <div class="col-sm-10">
-                    <input type="text" name="page_desc" class="form-control" placeholder="Page Description" value="<?php echo $type->page_desc; ?>" />
+                    <textarea name="page_desc" class="form-control" placeholder="Meta Description"><?php echo $type->page_desc; ?></textarea>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Page Key</label>
+                <label class="col-sm-2 control-label">Meta Key</label>
                 <div class="col-sm-10">
-                    <input type="text" name="page_key" class="form-control" placeholder="Page Key" value="<?php echo $type->page_key; ?>">
+                    <textarea name="page_key" class="form-control" placeholder="Meta Key"><?php echo $type->page_key; ?></textarea>
                 </div>
             </div>
 			

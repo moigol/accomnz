@@ -30,7 +30,7 @@ class Bookittype extends Controller
     
     public function edit()
     {
-        $this->model->indexAssets();
+        $this->model->commonAssets();
         $this->model->doSave();   
         $bookittype = $this->model->bookittype($this->segment[2]);
         View::page('bookittype/edit', get_defined_vars());  
@@ -39,7 +39,7 @@ class Bookittype extends Controller
     public function add()
     {
         $this->model->doSave();
-        $this->model->indexAssets();
+        $this->model->commonAssets();
         View::page('bookittype/add', get_defined_vars());  
     }
 }

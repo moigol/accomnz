@@ -72,6 +72,8 @@ class Regions_model extends Model
                         
                         $this->setSession('message',"Region has been updated!");
 
+                        //$data['list_desc'] = $this->encrypt($data['list_desc']);
+
                         $regID = $this->db->update("regions", $data, array('id' => $regid));
                         
                         App::activityLog("Updated Region #ID-".$prid.'.');
@@ -82,6 +84,8 @@ class Regions_model extends Model
                         $data = $this->post;
                         unset($data['action']);
 
+                        //$data['list_desc'] = $this->encrypt($data['list_desc']);
+                        
                         $prodID = $this->db->insert("regions", $data);
 
                         if($prodID) {
@@ -110,6 +114,8 @@ class Regions_model extends Model
     
     public function commonAssets()
     {
+        View::$scripts[] = 'assets/js/ckeditor/ckeditor.js';
+
         View::$footerscripts[] = "vendors/datatables/js/jquery.dataTables.min.js";
         View::$footerscripts[] = "vendors/datatables/dataTables.bootstrap.js";
         View::$footerscripts[] = 'assets/js/tables.js';
@@ -125,6 +131,7 @@ class Regions_model extends Model
 
     public function indexAssets()
     {
+
         View::$footerscripts[] = "vendors/datatables/js/jquery.dataTables.min.js";
         View::$footerscripts[] = "vendors/datatables/dataTables.bootstrap.js";
         View::$footerscripts[] = 'assets/js/tables.js';

@@ -54,6 +54,8 @@ class Type_model extends Model
                         
                         $this->setSession('message',"Type has been updated!");
 
+                        //$data['list_desc'] = $this->encrypt($data['list_desc']);
+
                         $typeID = $this->db->update("type", $data, array('id' => $typeid));
                         
                         App::activityLog("Updated Type #ID-".$typeid.'.');
@@ -63,6 +65,8 @@ class Type_model extends Model
 
                         $data = $this->post;
                         unset($data['action']);
+
+                        //$data['list_desc'] = $this->encrypt($data['list_desc']);
 
                         $typeID = $this->db->insert("type", $data);
 
@@ -92,6 +96,8 @@ class Type_model extends Model
     
     public function commonAssets()
     {
+        View::$scripts[] = 'assets/js/ckeditor/ckeditor.js';
+
         View::$footerscripts[] = "vendors/datatables/js/jquery.dataTables.min.js";
         View::$footerscripts[] = "vendors/datatables/dataTables.bootstrap.js";
         View::$footerscripts[] = 'assets/js/tables.js';

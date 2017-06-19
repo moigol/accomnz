@@ -20,8 +20,8 @@ View::header();
                     <th>Lat</th> 
                     <th>Suburb Code</th>  
                     <th>Region Code</th>
-                    <th>Title</th> 
-                    <th>Description</th> 
+                    <th>Page Heading</th> 
+                    <th>Page Content</th> 
                     <th class="no-sorting text-center">Action</th>
                 </tr>
             </thead>

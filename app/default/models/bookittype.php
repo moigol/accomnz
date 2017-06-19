@@ -54,6 +54,8 @@ class Bookittype_model extends Model
                         
                         $this->setSession('message',"Region has been updated!");
 
+                        //$data['list_desc'] = $this->encrypt($data['list_desc']);
+
                         $bookittypeID = $this->db->update("bookit_type", $data, array('id' => $bookittypeid));
                         
                         App::activityLog("Updated Book it type #ID-".$bookittypeid.'.');
@@ -63,6 +65,8 @@ class Bookittype_model extends Model
 
                         $data = $this->post;
                         unset($data['action']);
+
+                        //$data['list_desc'] = $this->encrypt($data['list_desc']);
 
                         $bookittypeID = $this->db->insert("bookit_type", $data);
 
@@ -92,6 +96,8 @@ class Bookittype_model extends Model
     
     public function commonAssets()
     {
+        View::$scripts[] = 'assets/js/ckeditor/ckeditor.js';
+ 
         View::$footerscripts[] = "vendors/datatables/js/jquery.dataTables.min.js";
         View::$footerscripts[] = "vendors/datatables/dataTables.bootstrap.js";
         View::$footerscripts[] = 'assets/js/tables.js';

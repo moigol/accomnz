@@ -56,8 +56,8 @@ class Common
 
     function sanitizeRequest()  
     {
-        $this->get = isset($_GET) ? $this->cleanArrayData($_GET) : NULL;
-        $this->post = isset($_POST) ? $this->cleanArrayData($_POST) : NULL;
+        $this->get = isset($_GET) ? $_GET : NULL;
+        $this->post = isset($_POST) ? $_POST : NULL;
         $this->file = isset($_FILES) ? $_FILES : NULL;
         
         return true;

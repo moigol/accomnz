@@ -58,33 +58,36 @@ View::header();
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">List Title</label>
+                <label class="col-sm-2 control-label">Page Heading</label>
                 <div class="col-sm-10">
-                    <textarea name="list_title" class="form-control" placeholder="List Title" value="">
+                    <textarea name="list_title" class="form-control" placeholder="Page Heading"></textarea>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">List Description</label>
+                <label class="col-sm-2 control-label">Page Content</label>
                 <div class="col-sm-10">
-                    <textarea name="list_desc" class="form-control" placeholder="List Description" value="">
+                    <textarea name="list_desc"></textarea>
+                    <script>
+                        CKEDITOR.replace( 'list_desc' );
+                    </script>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">Page Title</label>
                 <div class="col-sm-10">
-                    <input type="text" name="page_title" class="form-control" placeholder="Page Title" value="" />
+                    <textarea name="page_title" class="form-control" placeholder="Page Title"></textarea>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Page Description</label>
+                <label class="col-sm-2 control-label">Meta Description</label>
                 <div class="col-sm-10">
-                    <input type="text" name="page_desc" class="form-control" placeholder="Page Description" value="">
+                    <textarea name="page_desc" class="form-control" placeholder="Meta Description"></textarea>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label">Page Key</label>
+                <label class="col-sm-2 control-label">Meta Key</label>
                 <div class="col-sm-10">
-                    <input type="text" name="page_key" class="form-control" placeholder="Page Key" value="">
+                    <textarea name="page_key" class="form-control" placeholder="Meta Key"></textarea>
                 </div>
             </div>
             <div class="form-group">

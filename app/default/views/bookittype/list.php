@@ -19,8 +19,8 @@ View::header();
                     <th>Code</th>
                     <th>Name</th>
                     <th>Page Title</th>
-                    <th>Page Desc</th> 
-                    <th>Page Key</th>  
+                    <th>Meta Desc</th> 
+                    <th>Meta Key</th>  
                     <th class="no-sorting text-center">Action</th>
                 </tr>
             </thead>
